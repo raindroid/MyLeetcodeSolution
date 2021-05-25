@@ -1,6 +1,6 @@
 {
     "code-runner.executorMap": {
-        "kotlin": "cd $dir && javac $(find ../helpers -name '*.java') && kotlinc $fileName -d $fileNameWithoutExt.jar -classpath . && java -jar $fileNameWithoutExt.jar",
+        "kotlin": "cd $dir && javac $(find ../helpers -name '*.java') && cp $(find ../helpers -name '*.class') . && kotlinc $fileName -d $fileNameWithoutExt.jar -classpath . && java -jar $fileNameWithoutExt.jar",
         "javascript": "node",
         "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName && cp $(find ../helpers -name '*.class') . && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
