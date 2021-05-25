@@ -1,4 +1,3 @@
-#!/snap/bin/kotlinc -script 
 import java.util.*
 
 class Solution {
@@ -21,5 +20,6 @@ class Solution {
 }
 
 
-
-println(Arrays.toString(Solution().twoSum(nums = intArrayOf(2,7,11,15), target = 9)))
+fun main() {
+    println(Arrays.toString(Solution().twoSum(nums = intArrayOf(2,7,11,15), target = 9)))
+}
