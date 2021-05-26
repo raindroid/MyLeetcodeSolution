@@ -131,3 +131,7 @@ dmypy.json
 # java
 *.jar
 *.class
+
+# temperary compiled folder
+tmp
+META-INF

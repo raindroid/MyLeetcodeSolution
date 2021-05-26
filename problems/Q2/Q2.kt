@@ -31,5 +31,10 @@ class Solution {
 }
 
 fun main() {
-    println("Test");
+    ListNode.printLinkedList(
+            Solution().addTwoNumbers(
+                ListNode.createLinkedList(arrayListOf(2, 4, 3)), 
+                ListNode.createLinkedList(arrayListOf(5, 6, 4))
+            )
+        );
 }

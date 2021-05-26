@@ -1,8 +1,8 @@
 {
     "code-runner.executorMap": {
-        "kotlin": "cd $dir && javac $(find ../helpers -name '*.java') && cp $(find ../helpers -name '*.class') . && kotlinc $fileName -d $fileNameWithoutExt.jar -classpath . && java -jar $fileNameWithoutExt.jar",
+        "kotlin": "cd $dir && javac $(find ../helpers -name '*.java') -d ./tmp -cp ./tmp && kotlinc $fileName -d ./tmp -cp ./tmp && kotlin -cp ./tmp $fileNameWithoutExtKt",
         "javascript": "node",
-        "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName && cp $(find ../helpers -name '*.class') . && java $fileNameWithoutExt",
+        "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName -d ./tmp -cp ./tmp && java -cp ./tmp $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
