@@ -11,7 +11,7 @@
         "perl": "perl",
         "perl6": "perl6",
         "ruby": "ruby",
-        "go": "go run",
+        "go": "cd $dir && cp -rf $(find ../helpers -name '*.go') $fileName ./tmp && go run ./tmp/*.go",
         "lua": "lua",
         "groovy": "groovy",
         "powershell": "powershell -ExecutionPolicy ByPass -File",
