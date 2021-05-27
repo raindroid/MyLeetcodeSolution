@@ -10,7 +10,7 @@ package main
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     result := &ListNode{}
     var digit *ListNode = nil
-	carry := (l1.Val + l2.Val) / 10
+	carry := 0
 	for ; (l1 != nil || l2 != nil || carry != 0); {
 		if digit == nil {
 			digit = result
