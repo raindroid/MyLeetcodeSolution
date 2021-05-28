@@ -14,9 +14,10 @@ Try with different languages
 
 - and Maybe in future
   - C#
-  - Haskell
+  - TypeScript
+  - Haskell (Not supported by leetcode)
 
 Content
-- [Tools](./tools/tools.md)
+- [Tools](./tools/tools.md) Contains extra tools and execution instructions
 - [Q1](./problems/Q1/Q1.md) Two Sum [link](https://leetcode.com/problems/two-sum/)
 - [Q2](./problems/Q2/Q2.md) Add Two Numbers [link](https://leetcode.com/problems/add-two-numbers/)

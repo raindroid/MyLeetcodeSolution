@@ -4,14 +4,14 @@
         "javascript": "node",
         "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName -d ./tmp -cp ./tmp && java -cp ./tmp $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && mkdir -p ./tmp && g++ $fileName -o ./tmp/$fileNameWithoutExt && ./tmp/$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",
         "perl": "perl",
         "perl6": "perl6",
         "ruby": "ruby",
-        "go": "cd $dir && cp -rf $(find ../helpers -name '*.go') $fileName ./tmp && go run ./tmp/*.go",
+        "go": "cd $dir && rsync $(find ../helpers -name '*.go') $fileName ./tmp/ && go run ./tmp/*.go",
         "lua": "lua",
         "groovy": "groovy",
         "powershell": "powershell -ExecutionPolicy ByPass -File",
@@ -23,7 +23,7 @@
         "typescript": "ts-node",
         "coffeescript": "coffee",
         "scala": "scala",
-        "swift": "swift",
+        "swift": "cd $dir && rsync $(find ../helpers -name '*.swift') ./tmp/ && cp $fileName ./tmp/main.swift && swiftc ./tmp/*.swift -o ./tmp/$fileNameWithoutExt && ./tmp/$fileNameWithoutExt",
         "julia": "julia",
         "crystal": "crystal",
         "ocaml": "ocaml",
@@ -51,5 +51,9 @@
         "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-    }
+    },
+    "code-runner.ignoreSelection": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true
 }

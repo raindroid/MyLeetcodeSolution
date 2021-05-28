@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 import sys
-sys.path.append('./problems/helpers/linkedlist')
+sys.path.append('../helpers/linkedlist')
 from ListNode import *
 
 
