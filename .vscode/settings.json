@@ -12,7 +12,7 @@
         "perl6": "perl6",
         "ruby": "ruby",
         "go": "cd $dir && rsync $(find ../helpers -name '*.go') $fileName ./tmp/ && go run ./tmp/*.go",
-        "lua": "cd $dir && lua $fileName",
+        "lua": "lua",
         "groovy": "groovy",
         "powershell": "powershell -ExecutionPolicy ByPass -File",
         "bat": "cmd /c",
