@@ -7,6 +7,7 @@
  *     var next: ListNode? = null
  * }
  */
+import problems.helpers.linkedlist.ListNode;
 class Solution {
     fun addTwoNumbers(il1: ListNode?, il2: ListNode?): ListNode? {
         var res = ListNode(0)

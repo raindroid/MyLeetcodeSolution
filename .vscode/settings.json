@@ -2,7 +2,7 @@
     "code-runner.executorMap": {
         "kotlin": "cd $dir && javac $(find ../helpers -name '*.java') -d ./tmp -cp ./tmp && kotlinc $fileName -d ./tmp -cp ./tmp && kotlin -cp ./tmp $fileNameWithoutExtKt",
         "javascript": "node",
-        "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName -d ./tmp -cp ./tmp && java -cp ./tmp $fileNameWithoutExt",
+        "java": "cd $dir && javac $(find ../helpers -name '*.java') $fileName -d ./tmp -cp ./tmp && java -cp ./tmp problems.$fileNameWithoutExt.$fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && mkdir -p ./tmp && g++ $fileName -o ./tmp/$fileNameWithoutExt && ./tmp/$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
