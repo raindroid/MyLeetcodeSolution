@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # requires bash4 support
 
 LANGUAGES=(
