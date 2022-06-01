@@ -45,5 +45,6 @@ for language in "${LANGUAGES[@]}"; do
         printf "| %-10s | %-30s | -           | -          |\n" $name "[Q$1.$ext](./Q$1.$ext)" >> $md_path
     fi 
     
-    touch "$q_path/Q$1.$ext"
+    # touch "$q_path/Q$1.$ext"
+    sed -e "s/%%Qi/Q$1/g" "$parent_path/problems/templates/t.$ext" >> "$q_path/Q$1.$ext"
 done

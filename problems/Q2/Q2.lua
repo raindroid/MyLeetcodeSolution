@@ -12,7 +12,7 @@ local function addTwoNumbers(l1, l2)
             digit.next_node = ListNode({})
             digit = digit.next_node
         end
-        value = carry + (l1 and l1.val or 0) + (l2 and l2.val or 0)
+        local value = carry + (l1 and l1.val or 0) + (l2 and l2.val or 0)
         l1 = l1 and l1.next_node
         l2 = l2 and l2.next_node
         carry = math.floor( value / 10 )
